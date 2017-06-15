@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" ng-app="angularPicSearch">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="utf-8">
+        <title>Monsuta</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body ng-controller="myCtrl">
+        <div role="main" class="container theme-showcase">
+            <div class="" style="width:100%">
+                <div  class='floatLeft' style="width:100%">
+                    <div class="page-header floatLeft">
+                        <h2 id="tables" class='floatLeft' style="width: 30%;">MonSuta</h2>
+                        <div class='floatRight' style='margin-top: 25px;'>
+                            <input type="text" name="" class='searchItem' ng-model='searchItemModel' ng-change="showCategorySearch()"/>
+                        </div>
+                    </div>
+
+                    <!--                    <div class='floatLeft' ng-click="showCategorySearch()">search</div>
+                                        <div class='clearfix'></div>-->
+
+                    <div class="firstParentDiv floatLeft row">
+                        <div class='col-sm-12 col-xs-12 col-md-12 floatLeft center cutout needed'>
+                            <div style='margin: auto;width:85%'>
+                                <div class='pagePrev floatLeft' ng-click="moveRight()" ng-show="noOfPages > 10"></div>
+                                <div class='paginationParent floatLeft'>
+                                    <div class='paginationSubParent floatLeft'>
+                                        <ul ng-repeat="n in []| range:noOfPages" class="pagination">
+                                            <li ng-click='updateIndex(n + 1)' ng-class="{'active': $index === 0}"><a href="#">{{n + 1}}</a></li>                               
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class='pageNext floatLeft' ng-click="moveLeft()" ng-show="noOfPages > 10"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div class='main'>
+                        <div ng-repeat="x in filteredSearchData| filter: {'serachTag': searchItemModel} | startFrom:beginIndex | limitTo:10" class='currentImage'>
+                            <div id="path" class='row'><img ng-src='{{x.path}}' class="smallImage center-block" ng-click="zoom(x, $index)"></div>
+                            <!--                            <div>{{$index}}</div>-->
+                            <hr/>
+                        </div>
+                    </div>
+
+                    <!--                        <div class='col-sm-12 col-xs-12 col-md-12'>
+                                                <ul ng-repeat="n in []| range:noOfPages" class="pagination">
+                                                    <li ng-click='updateIndex(n + 1)'><a href="#">{{n + 1}}</a></li>                               
+                                                </ul>
+                                            </div>-->
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="SecondParentDiv floatLeft">
+            <!--            <input type="button"  class="btn btn-primary" value="Print Image" id="btnPrint" ng-click='print()'/>-->
+            <div class='imageClose' ng-click="closeImage()">X</div>
+            <div class='leftPanel floatLeft'><div  ng-click="prevImage()" class='prev'></div></div>
+            <div class='zommImageParent floatLeft row '><img class='zoomImage center-block'/></div>
+            <div class='rightPanel floatLeft'><div  ng-click="nextImage()" class='next'></div></div>
+            <div class='dummyDiv'></div>
+        </div>
+        <script src="lib/jquery-3.1.0.min.js" type="text/javascript"></script>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/dirPagination.js"></script>
+        <script src="app/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,245 @@
+.body{
+    margin:0;
+    padding:0px;
+    width:100%;
+    height:100px;
+}
+.zoomImage
+{
+    width: 100%;
+    height: 100%;
+    /*    margin-left: 35%;*/
+    background-size: 100% 100%;
+}
+
+.SecondParentDiv{
+    position: absolute;
+    display:none;
+    background-image: url('../images/Transperent-Semi.png');
+    background-size: 100% 100%;
+    top: 0px;
+    width:100%;
+    height:100%;
+}   
+.firstParentDiv
+{
+    width: 100%;
+}
+.zommImageParent
+{
+    /*    width: 1000px;*/
+    /*    height:600px;
+        overflow: scroll;*/
+    border: 5px solid black;
+    margin-top: 50px;
+    //height: 88%;
+}
+.floatLeft
+{
+    float: left;
+}
+.floatRight
+{
+    float: right;
+}
+.leftPanel
+{
+    width: 10%;
+}
+.prev
+{
+    width: 50px;
+    height:50px;
+    background-image: url('../images/previous_n.jpg');
+    background-size: 100% 100%;
+    margin-top: 300px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.prev:hover
+{
+    background-image: url('../images/previous_o.jpg');
+
+}
+.zommImageParent{
+    width:80%;
+    //height:40%;
+    height:500px;
+}
+.rightPanel
+{
+    width: 10%;
+}
+.next{
+    width: 50px;
+    height:50px;
+    background-image: url('../images/next_n.jpg');
+    background-size: 100% 100%;
+    margin-top: 300px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.next:hover
+{
+    background-image: url('../images/next_o.jpg');
+
+}
+#path{
+    cursor: pointer;
+    width: auto;
+    height: 100%;
+}
+.imageClose
+{
+    font-size: 30px;
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    cursor: pointer;
+}
+.tabLocal{
+    margin-right: 10px;
+}
+
+.page-header
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#btnPrint{
+    position: absolute;
+    left: 46%;
+    top:1%;
+}
+li.active
+{
+    position: relative;
+    z-index: 0;
+}
+.paginationParent{
+    width: 250px;
+    overflow: hidden;
+    height: 75px;
+    // border: 1px solid red;
+
+}
+.paginationSubParent{
+    //width: 500px;
+    //border: 1px solid blue;
+    height: 75px;
+
+}
+.customPageNo{
+    height:20px;
+    width: 20px;
+    // border: 1px solid red;
+}
+.pagePrev
+{
+    width: 25px;
+    height:25px;
+    background-image: url('../images/previous_n.jpg');
+    background-size: 100% 100%;
+    margin-top: 24px;
+    cursor: pointer;
+}
+.pagePrev:hover
+{
+    background-image: url('../images/previous_o.jpg');
+
+}
+.pageNext{
+    width: 25px;
+    height:25px;
+    background-image: url('../images/next_n.jpg');
+    background-size: 100% 100%;
+    margin-top: 24px;
+    cursor: pointer;   
+}
+.pageNext:hover
+{
+    background-image: url('../images/next_o.jpg');
+
+}
+.currentImage 
+{
+    width: 20%;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    background: #cbede6;
+    float: left;
+}
+.smallImage
+{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height:auto;
+}
+.container{
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+.row
+{
+    margin: 0;
+}
+.cutout
+{
+    padding: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .currentImage {
+        width:50%;
+    }
+    .leftPanel
+    {
+        width: 13%;
+
+    }
+    .rightPanel
+    {
+        width: 13%;
+    }
+    .prev {
+        width: 25px;
+        height: 25px;
+        margin: auto;
+        margin-top: 300px;
+    }
+    .next
+    {
+        width: 25px;
+        height: 25px;
+        margin: auto;
+        margin-top: 300px;
+    }
+    .zommImageParent
+    {
+        width:74%;
+        margin: auto;
+        margin-top: 20%;
+    }
+    .pageNext
+    {
+        margin-top:24px;  
+    }
+    .pagePrev
+    {
+        margin-top: 24px;  
+
+    }
+    .imageClose {
+        font-size: 25px;
+        position: absolute;
+        right: 15px;
+        top: 60px;
+        cursor: pointer;
+    }
+}
